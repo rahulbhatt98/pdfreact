@@ -1,0 +1,289 @@
+
+.zr-docname
+{
+    /* margin-top: 12px;
+    margin-right: 5px; */
+    font-style: italic;
+    font-weight: 600;
+    /* float: left; */
+}
+
+.zr-progress {
+    position: relative;
+    /* height: 30px; */
+    width: 100%;
+    background-color: #ddd;
+    z-index: 1;
+}
+
+.zr-doc-processing {
+    padding-bottom: 3px;
+    margin-bottom: 3px;
+    border-bottom: 1px solid #D3D3D3;
+}
+
+.zr-progress-bar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    text-align: center;
+    line-height: 30px;
+    color: white;
+    z-index: 2;
+}
+
+.zr-status {
+    clear: both;
+}
+
+.zr-status-desc {
+    margin-top: 12px;
+    /* float: left; */
+}
+
+.zr-status-uploading .zr-status-desc {
+    color: brown;    
+}
+
+.zr-status-uploaded .zr-status-desc {
+    color: brown;    
+}
+
+.zr-status-in-queue .zr-status-desc {
+    color: blue;    
+}
+
+.zr-status-pre-queue .zr-status-desc {
+    color: blue;    
+}
+
+.zr-status-building-op-files .zr-status-desc {
+    color: blue;    
+}
+
+.zr-status-error-uploading .zr-status-desc {
+    color: red;    
+}
+
+.zr-status-upload-aborted .zr-status-desc {
+    color: red;    
+}
+
+.zr-status-scaffolder-not-running .zr-status-desc {
+    color: red;    
+}
+
+.zr-status-processing .zr-status-desc {
+    color: blue;    
+}
+
+.zr-status-ingesting .zr-status-desc {
+    color: purple;    
+}
+
+.zr-status-processed .zr-status-desc {
+    color: green;    
+}
+
+.zr-status-error-processing .zr-progress-bar {
+    color: red;    
+}
+
+.zr-status-scanned .zr-progress-bar {
+    color: red;    
+}
+
+.zr-status-absent .zr-progress-bar {
+    color: cadetblue;    
+}
+
+.zr-status-error-problematic .zr-status-desc {
+    color: red;    
+}
+
+.zr-status-retrieving-status .zr-status-desc {
+    color: blue;
+}
+
+.zr-status-incorrect-file-type  .zr-status-desc {
+    color: red;
+}
+
+.zr-status-unknown .zr-status-desc {
+    color: red;
+}
+
+.zr-status-Ingesting .zr-status-desc {
+    color: purple;    
+}
+
+.zr-progress-bar.uploading {
+    background-color: peru;
+}
+
+.zr-progress-bar.processing-other-user {
+    background-color: darkgray;
+}
+
+.zr-progress-bar.ingesting-other-user {
+    background-color: darkgray;
+}
+
+.zr-progress-bar.processing {
+    background-color: lightblue;
+}
+
+.zr-progress-bar.ingesting {
+    background-color:mediumorchid;
+}
+
+.zr-status-in-queue-other-user .zr-status-desc {
+    color: gray;    
+}
+
+.zr-status-pre-queue-other-user .zr-status-desc {
+    color: gray;    
+}
+
+.zr-status-building-op-files-other-user .zr-status-desc {
+    color: gray;    
+}
+
+.zr-status-processing-other-user .zr-status-desc {
+    color: gray;    
+}
+
+.zr-status-ingesting-other-user .zr-status-desc {
+    color: gray;    
+}
+
+.zr-status-unknown-other-user .zr-status-desc {
+    color: gray;    
+}
+
+.zr-processing-graphic {
+    display: inline-block;
+    /* float: left; */
+    height: 22px;
+    width: 22px;
+    margin-bottom: -5px;
+    padding-bottom: 0px;
+    /*Below from https://loading.io/spinner/gear/-rotate-gear-config-setting-tool */
+    background-image: url("assets/Gear-0.2s-200px.gif");
+    background-size: 22px;
+}
+
+.zr-progress-text {
+    position: relative;
+    top: 0;
+    left: 0;
+    margin: 0;
+    /* height: 30px; */
+    width: 100%;
+    height: 100%;
+    z-index: 3;
+    text-align: center;
+    /* top: 50%;
+    transform: translate(0, -50%); */
+    background: transparent;
+}
+
+.zr-comment {
+    font-style:italic;
+}
+
+/*.zr-block {
+    /*text-align: center;
+}
+*/
+
+.zr-control-row
+{
+    padding-left: 30px;
+}
+
+.zr-upload-ctrls {
+    margin-top: 20px;
+    margin-left: 10px;
+    margin-bottom: 30px;
+    /*text-align: center;*/
+}
+
+.zr-error-message {
+    color: firebrick;
+    font-size: 1.2em;
+}
+
+.zr-end-of-block {
+    text-align: center;
+}
+
+.zr-instructions {
+    font-style: italic;
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+#zr-drop-zone {
+    display: block;
+    /*height: 200px;
+    width: 80%;
+    background-color: gray;*/
+    padding: 20px 10px 10px 10px;
+    margin-top: 20px;
+    border-style: dashed;
+}
+
+.zr-drop-zone {
+    display: block;
+    /*height: 200px;
+    width: 80%;
+    background-color: gray;*/
+    padding: 20px 10px 10px 10px;
+    margin-top: 20px;
+    border-style: dashed;
+}
+
+.zr-highlight
+{
+    background-color: aliceblue;
+}
+
+.zr-statuses-container {
+    font-size: 0.8em;
+    display: inline-block;
+    width: 100%;
+}
+
+#zr-statuses-control-bar {
+    margin-top: 40px;
+    margin-bottom: 10px;
+    display: inline-block;
+    width: 100%;
+}
+
+#zr-statuses-clear-btn {
+    /*display: inline-block;*/
+    float: right;
+}
+
+#other-users-docs-hdg {
+    font-size: 14pt;
+    margin-top: 20px;
+    font-weight: 500;
+    font-style: italic;
+}
+
+input[type=number] {
+    width: 50px;
+}
+
+#lstDocuments {
+    width: 100%;
+    overflow-y: scroll;
+}
+
+input[type=file] {
+    min-width: 500px;
+}

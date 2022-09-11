@@ -1,0 +1,33 @@
+.top-nav{
+    background: $white;
+    .navbar-nav{
+        .nav-link{
+           position: relative;
+           align-items: center;
+           display: flex;
+           padding: 0.8rem 1rem;
+           &:after{
+               content: "";
+               width: 2px;
+               height: 15px;
+               background: #ECECEC;
+               position: absolute;
+               right: 0;
+           }
+           svg{
+               margin-right: 8px;
+           }
+        }
+        .drop-btn{
+            background-color: $white;
+            border-color: $white;
+            &:focus{
+
+                box-shadow: none;
+            }
+            &.dropdown-toggle::after{
+                border-top: 0.3em solid $primary;
+            }
+        }
+    }
+}

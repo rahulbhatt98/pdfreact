@@ -1,0 +1,44 @@
+import { createSlice } from "@reduxjs/toolkit"
+import { uploadDocuments } from "store/actions/addDocuments";
+import {  ExtractNewDocuments } from 'store/actions/documents'
+
+ const UploadDocumentsSlice = createSlice({
+  name: "uploadDocuments",
+  initialState: {
+    isSavingDoc: false,
+    dataDoc: [] ,
+    isSavingErrored:false,
+    isSaved:false
+  },
+  reducers: {
+    setDocumentUploadProgress:(state)=>{
+      
+    }
+    // Reducer comes here
+  },
+  extraReducers: (builder) => {
+    // Add reducers for additional action types here, and handle loading state as needed
+    builder.addCase(uploadDocuments.fulfilled, (state, action) => {
+    
+    //     // Add user to the state array
+        state.isSavingDoc = false;
+        state.isSaved =  action.payload.statusCode===200 ? true :false
+        // state.isErrored = action.payload.status==400?true:false
+        // state.dataDoc = action.payload.statusCode===200?action.payload.data:[]
+    });
+    builder.addCase(uploadDocuments.pending, (state) => {
+     
+      state.isSaved  = false
+      state.isSavingDoc = true;
+        // state.isErroredDoc = true;
+        // state.isLoadingDoc = true;
+    });
+    builder.addCase(uploadDocuments.rejected,(state)=>{
+        state.isSaved  = false
+        state.isSavingDoc = false;
+       state.isSavingErrored = true
+    });
+}
+})
+
+export { UploadDocumentsSlice }

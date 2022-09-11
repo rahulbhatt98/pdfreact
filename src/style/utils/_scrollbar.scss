@@ -1,0 +1,48 @@
+$scrollbar-width: 6px;
+$scrollbar-height: 6px;
+@mixin scrollbar {
+    &::-webkit-scrollbar {
+        width: 0px;
+        height: 0px;
+        &-thumb {
+            background: transparent;
+        }
+        &-track {
+            background: transparent;
+        }
+    }
+    &:hover{
+        &::-webkit-scrollbar {
+            width: $scrollbar-width;
+            height: $scrollbar-height;
+            &-thumb {
+                background-color: rgba($color: $black, $alpha: 0.2);
+                &:hover {
+                    background-color: rgba($color: $black, $alpha: 0.4);
+                }
+            }
+        }
+        @include media-breakpoint-down(xs) {
+            &:hover::-webkit-scrollbar {
+                width: 0;
+                height: 0;
+            }
+        }
+    }
+}
+@mixin scrollbar-fixed {
+    &::-webkit-scrollbar {
+        width: $scrollbar-width;
+        height: $scrollbar-height;
+        &-thumb {
+            // background: transparent;
+            background-color: rgba($color: $black, $alpha: 0.2);
+            &:hover {
+                background-color: rgba($color: $black, $alpha: 0.4);
+            }
+        }
+        &-track {
+            background: transparent;
+        }
+    }
+}
